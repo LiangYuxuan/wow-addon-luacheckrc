@@ -38,4 +38,6 @@ jobs:
           body: ${{ env.RELEASE_NAME }}
           draft: false
           prerelease: false
-          files: .luacheckrc
+          files: |
+            .luacheckrc
+            beta.luacheckrc
