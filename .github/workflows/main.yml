@@ -22,13 +22,6 @@ jobs:
 
       - name: Generate .luacheckrc
         uses: LiangYuxuan/action-generate-luacheckrc@master
-          
-      - name: Generate beta.luacheckrc
-        uses: LiangYuxuan/action-generate-luacheckrc@master
-        with:
-          target-path: beta.luacheckrc
-          ui-source-branch: beta
-          interface-resources-branch: mainline_beta
 
       - name: Release .luacheckrc
         uses: softprops/action-gh-release@v1
@@ -40,4 +33,3 @@ jobs:
           prerelease: false
           files: |
             .luacheckrc
-            beta.luacheckrc
