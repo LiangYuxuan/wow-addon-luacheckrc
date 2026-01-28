@@ -28,14 +28,7 @@ jobs:
         with:
           target-path: beta.luacheckrc
           ui-source-branch: beta
-          interface-resources-branch: mainline_beta
-
-      - name: Generate ptr.luacheckrc
-        uses: LiangYuxuan/action-generate-luacheckrc@master
-        with:
-          target-path: ptr.luacheckrc
-          ui-source-branch: ptr
-          interface-resources-branch: mainline_ptr
+          interface-resources-branch: beta
 
       - name: Release .luacheckrc
         uses: softprops/action-gh-release@v2
@@ -48,4 +41,3 @@ jobs:
           files: |
             .luacheckrc
             beta.luacheckrc
-            ptr.luacheckrc
